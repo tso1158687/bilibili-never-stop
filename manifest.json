@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Bilibili Never Stop",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["http://*.bilibili.com/*", "https://*.bilibili.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.bilibili.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
