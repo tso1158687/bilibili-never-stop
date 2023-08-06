@@ -4,11 +4,11 @@ let video = document.querySelector('video');
 video.addEventListener('pause', function() {
     console.log('Video is now paused');
     video.play();
+    setTimeout(() => {
+       const modalElement=document.getElementsByClassName('bili-mini-mask')
+         if(modalElement.length>0){
+            console.log('關關難過關關過，一秒後自動關閉')
+            modalElement[0].parentElement.removeChild(modalElement[0])
+         }
+    }, 100);
 });
-
-video.addEventListener('play', function() {
-    console.log('Video is now playing');
-});
-// Check if the video is playing
-let isPlaying = video.currentTime > 0 && !video.paused && !video.ended
-    && video.readyState > 2;
