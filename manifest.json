@@ -2,9 +2,6 @@
   "manifest_version": 3,
   "name": "Bilibili Never Stop",
   "version": "1.0",
-  "action": {
-    "default_popup": "popup.html"
-  },
   "background": {
     "service_worker": "background.js"
   },
