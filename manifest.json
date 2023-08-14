@@ -5,7 +5,7 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["scripting"],
   "host_permissions": ["http://*.bilibili.com/*", "https://*.bilibili.com/*"],
   "content_scripts": [
     {
